@@ -1,0 +1,39 @@
+version: '3'
+services:
+  app-wpds.dev:
+    image: 'node:8'
+    user: 'node'
+    working_dir: /home/node/app
+    volumes:
+      - ./app/client/:/home/node/app
+    ports:
+      - "3000:3000"
+    command: "npm start"
+  buy-button-wpds.dev:
+    image: 'node:8'
+    user: 'node'
+    working_dir: /home/node/app
+    volumes:
+      - ./buy-button/client:/home/node/app
+    ports:
+      - "4000:3000"
+    command: "npm start"
+  shopping-cart-wpds.dev:
+    image: 'node:8'
+    user: 'node'
+    working_dir: /home/node/app
+    ports:
+      - "5000:3000"
+    volumes:
+      - ./shopping-cart/client:/home/node/app
+    command: "npm start"
+  app-server.dev:
+    image: 'node:8'
+    user: 'node'
+    working_dir: /home/node/app
+    volumes:
+      - ./app/server/:/home/node/app
+    ports:
+      - "3020:3000"
+    command: "npm run start:dev"
+

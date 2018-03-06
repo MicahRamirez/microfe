@@ -1,0 +1,31 @@
+{
+  "name": "app-server",
+  "version": "1.0.0",
+  "description": "Main app server for microfrontend project",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "start:dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MicahRamirez/microfe.git"
+  },
+  "keywords": [
+    "microfrontend"
+  ],
+  "author": "Micah Ramirez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MicahRamirez/microfe/issues"
+  },
+  "homepage": "https://github.com/MicahRamirez/microfe#readme",
+  "dependencies": {
+    "convict": "^4.0.2",
+    "express": "^4.16.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.17.1"
+  }
+}
