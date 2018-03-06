@@ -33,6 +33,8 @@ services:
     working_dir: /home/node/app
     volumes:
       - ./app/server/:/home/node/app
+      # Mount production build of static content
+      - ./app/client/build/:/home/node/app/build
     ports:
       - "3020:3000"
     command: "npm run start:dev"
