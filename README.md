@@ -10,7 +10,9 @@ A shopping cart
 `docker-compose up`
 
 app-container -> `localhost:3000` Webpack dev server
+
 buy-button -> `localhost:4000` Webpack dev server
+
 shopping-cart -> `localhost:5000` Webpack dev server
 
 WIP 
