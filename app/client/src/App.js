@@ -1,8 +1,16 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 import logo from './logo.svg';
 import './App.css';
 
+const API_SERVER_URL = 'http://localhost:3020';
+
 class App extends Component {
+  componentDidMount() {
+    axios.get(`${API_SERVER_URL}/api/ping`)
+      .then((res) => console.log(res))
+      .catch((err) => console.log(err));
+  }
   render() {
     return (
       <div className="App">
